@@ -5,7 +5,8 @@ import { Route} from "react-router-dom";
 // import { createGlobalStyle } from 'styled-components';
 import GlobalStyle from "./style/GlobalStyle"
 
-import Layout from './style/Layout';
+import SiteBody from './style/SiteBody';
+import Aside from './componenets/Aside'
 import About from './About';
 import Home from './Home';
 
@@ -22,12 +23,12 @@ const App = props =>{
   return (
     <>
       <GlobalStyle colors={colors} />
-      
-      <Layout>
-       
-        <Route path='/about' exact component={About}/>
-        <Route path='/' exact component={Home}/>
-      </Layout>
+      <SiteBody>
+       <Aside colors={colors}/>
+        
+      </SiteBody>
+      <Route path='/about' exact component={About}/>
+      <Route path='/' exact component={Home}/>
     </>
   );
 }
