@@ -4,6 +4,7 @@ import { Route} from "react-router-dom";
 // import styled from 'styled-components';
 // import { createGlobalStyle } from 'styled-components';
 import GlobalStyle from "./style/GlobalStyle"
+import './style/icons.css'
 
 import SiteBody from './style/SiteBody';
 import Aside from './componenets/Aside'
