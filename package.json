@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "http://hakim.uipia.com/",
+  "homepage": "https://ahakem.github.io/hakim/",
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
