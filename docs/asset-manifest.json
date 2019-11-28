@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/hakim/static/css/main.9b89528a.chunk.css",
+    "main.js": "/hakim/static/js/main.e9cf9df7.chunk.js",
+    "main.js.map": "/hakim/static/js/main.e9cf9df7.chunk.js.map",
+    "runtime-main.js": "/hakim/static/js/runtime-main.a1a9f0b2.js",
+    "runtime-main.js.map": "/hakim/static/js/runtime-main.a1a9f0b2.js.map",
+    "static/js/2.cab2dc72.chunk.js": "/hakim/static/js/2.cab2dc72.chunk.js",
+    "static/js/2.cab2dc72.chunk.js.map": "/hakim/static/js/2.cab2dc72.chunk.js.map",
+    "index.html": "/hakim/index.html",
+    "precache-manifest.64986fb9d3fdeb8e006254b565b9189a.js": "/hakim/precache-manifest.64986fb9d3fdeb8e006254b565b9189a.js",
+    "service-worker.js": "/hakim/service-worker.js",
+    "static/css/main.9b89528a.chunk.css.map": "/hakim/static/css/main.9b89528a.chunk.css.map",
+    "static/media/bg.png": "/hakim/static/media/bg.ccfc34f7.png",
+    "static/media/hakim.jpg": "/hakim/static/media/hakim.dff1d2eb.jpg",
+    "static/media/icons.css": "/hakim/static/media/icomoon.b77e717d.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a1a9f0b2.js",
+    "static/js/2.cab2dc72.chunk.js",
+    "static/css/main.9b89528a.chunk.css",
+    "static/js/main.e9cf9df7.chunk.js"
+  ]
+}
