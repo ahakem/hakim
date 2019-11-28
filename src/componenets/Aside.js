@@ -5,11 +5,11 @@ import hakim from "../img/hakim.jpg";
 
 const SideInfo = styled.aside`
   border-radius: 14px;
-  box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: ${props => props.colors.box};
   min-height: 200px;
   text-align: center;
-  width: 300px;
+  width: 100%;
   @media screen and (min-width: 40em) {
     width: 210px;
   }
@@ -57,6 +57,12 @@ const Linkedin = styled.a`
 const InfoWrap = styled.ul`
   list-style: none;
   padding: 0;
+  display: inline-block;
+  margin: 0 auto 16px auto;
+  min-width:200px;
+  @media screen and (min-width: 40em) {
+    display: block;
+  }
 `;
 const InfoItem = styled.a`
   display: flex;
@@ -73,6 +79,16 @@ const InfoItem = styled.a`
 const InfoName = styled.span`
   font-size:12px;
   padding-left:16px;
+`;
+const Cv = styled.a`
+  border-radius: 20px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  background-color: #f29639;
+  font-size:16px;
+  color:${props => props.colors.text}
+  margin-bottom: 16px;
+  display: inline-block;
+  padding: 10px 16px;
 `;
 
 const Aside = props => (
@@ -98,6 +114,7 @@ const Aside = props => (
           );
         })}
       </InfoWrap>
+      <Cv colors={props.colors}><span className="icon-cloud_download"></span> Download Resume</Cv>
     </SideInfo>
   </>
 );
