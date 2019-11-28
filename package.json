@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://hakim.uipia.com",
+  "homepage": "https://portfolio.uipia.com/",
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
