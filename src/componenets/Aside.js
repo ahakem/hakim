@@ -114,7 +114,7 @@ const Aside = props => (
           );
         })}
       </InfoWrap>
-      <Cv colors={props.colors}><span className="icon-cloud_download"></span> Download Resume</Cv>
+      <Cv href="#" colors={props.colors}><span className="icon-cloud_download"></span> Download Resume</Cv>
     </SideInfo>
   </>
 );
