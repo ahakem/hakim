@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f3df6eec04a7c404df70c7e9108fe348",
+    "revision": "0f0b9ca03e76c434b2b41e37ca2bd72b",
     "url": "/hakim/index.html"
   },
   {
-    "revision": "0157fbb04ce404f711a4",
+    "revision": "b94334b29685129313fd",
     "url": "/hakim/static/css/main.9b89528a.chunk.css"
   },
   {
-    "revision": "5ab7a6e7f9a128bfa569",
-    "url": "/hakim/static/js/2.cab2dc72.chunk.js"
+    "revision": "b33f1248095f9965bb87",
+    "url": "/hakim/static/js/2.a433b8db.chunk.js"
   },
   {
-    "revision": "0157fbb04ce404f711a4",
-    "url": "/hakim/static/js/main.e9cf9df7.chunk.js"
+    "revision": "b94334b29685129313fd",
+    "url": "/hakim/static/js/main.160d593c.chunk.js"
   },
   {
     "revision": "7376769335e18a990486",
