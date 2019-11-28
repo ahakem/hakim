@@ -8,6 +8,7 @@ import './style/icons.css'
 
 import SiteBody from './style/SiteBody';
 import Aside from './componenets/Aside'
+import Header from './componenets/Header'
 import About from './About';
 import Home from './Home';
 
@@ -28,6 +29,7 @@ const App = props =>{
        <Aside colors={colors}/>
         
       </SiteBody>
+      <Header/>
       <Route path='/about' exact component={About}/>
       <Route path='/' exact component={Home}/>
     </>
