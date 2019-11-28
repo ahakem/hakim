@@ -29,7 +29,7 @@ const App = props =>{
        <Aside colors={colors}/>
         
       </SiteBody>
-      {/* <Header/> */}
+      <Header/>
       <Route path='/about' exact component={About}/>
       <Route path='/' exact component={Home}/>
     </>
