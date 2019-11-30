@@ -28,8 +28,8 @@ const Content = props => (
   <>
     <ContentWrap colors={props.colors}>
       <Header/>
-      <Route path='/about' exact component={About}/>
-      <Route path='/' exact component={Resume}/>
+      <Route path='/' exact component={About}/>
+      <Route path='/resume' exact component={Resume}/>
       
     </ContentWrap>
   </>
