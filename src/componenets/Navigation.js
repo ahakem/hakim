@@ -1,17 +1,6 @@
-import React  from "react";
+import React from "react";
 import styled from "styled-components";
-import { keyframes } from "styled-components"
 import { Link } from "react-router-dom";
-
-const changeWidth = keyframes`
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 170px
-  }
-`;
 
 const Nav = styled.nav`
   position: absolute;
@@ -36,61 +25,35 @@ const Nav = styled.nav`
     top:0
   }
 
-  // .links{
-  //   display: none;
-  // }
-  // &.opened{
-  //   animation: ${changeWidth} .5s;
-  //   .links{display: flex;}
-  // }
+
 `;
 
-
-// const Button = styled.button`
-//   width: 50px;
-//   height: 50px;
-//   background: transparent;
-//   border: 0;
-//   font-size: 16px;
-//   color: #fff;
-//   cursor: pointer;
-//   outline: none;
-//   display: none;
-// `;
-
 const Anchor = styled.span`
-  margin:0 16px;
+  margin: 0 16px;
   line-height: 50px;
   display: inline-block;
   color: #fff;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Content = props => {
-  
-  // const toggleMenu = () => {
-  //   document.getElementById("navgation").classList.toggle("opened")
-  // };
-
-  return(
-  <>
-    <Nav id="navgation" colors={props.colors} className="opened" >
-      {/* <Button onClick={toggleMenu} colors={props.colors}>
-        <span className="icon-menu"></span>
-      </Button> */}
-      
-        <div className="links" >
-        
+  return (
+    <>
+      <Nav id="navgation" colors={props.colors} className="opened">
+        <div className="links">
           <Link to="/">
             <Anchor colors={props.colors}>About</Anchor>
           </Link>
           <Link to="/resume">
             <Anchor colors={props.colors}>Resume</Anchor>
           </Link>
-         
         </div>
-      
-    </Nav>
-  </>
-)};
+      </Nav>
+    </>
+  );
+};
 
 export default Content;
