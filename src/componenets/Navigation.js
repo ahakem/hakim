@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Nav = styled.nav`
   position: absolute;
@@ -24,7 +24,9 @@ const Nav = styled.nav`
   @media screen and (min-width: 40em) {
     top:0
   }
-
+  .current span{
+    color: rgba(255,255,255,1);
+  }
 
 `;
 
@@ -32,10 +34,11 @@ const Anchor = styled.span`
   margin: 0 16px;
   line-height: 50px;
   display: inline-block;
-  color: #fff;
+  color: rgba(255,255,255,0.5);
   transition: all 0.2s ease-in-out;
   &:hover {
     transform: scale(1.1);
+    color: rgba(255,255,255,1);
   }
 `;
 
@@ -44,12 +47,12 @@ const Content = props => {
     <>
       <Nav id="navgation" colors={props.colors} className="opened">
         <div className="links">
-          <Link to="/">
-            <Anchor colors={props.colors}>About</Anchor>
-          </Link>
-          <Link to="/resume">
-            <Anchor colors={props.colors}>Resume</Anchor>
-          </Link>
+          <NavLink exact activeClassName="current" to="/">
+            <Anchor>About</Anchor>
+          </NavLink>
+          <NavLink exact activeClassName="current" to="/resume">
+            <Anchor>Resume</Anchor>
+          </NavLink>
         </div>
       </Nav>
     </>
