@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import infoCard from "../data/infoCard";
 import hakim from "../img/hakim.jpg";
@@ -7,16 +7,15 @@ const SideInfo = styled.aside`
   border-radius: 14px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: ${props => props.colors.box};
-  min-height: 200px;
   text-align: center;
   width: 100%;
+  margin-bottom:16px;
   @media screen and (min-width: 40em) {
     width: 210px;
+    margin-bottom:0;
   }
 
-  @media screen and (min-width: 64em) {
-    width: 210px;
-  }
+  
   .profile-photo {
     width: 130px;
     margin-top: -70px;
@@ -85,10 +84,15 @@ const Cv = styled.a`
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
   background-color: #f29639;
   font-size:16px;
-  color:${props => props.colors.text}
+  color:#fff
   margin-bottom: 16px;
   display: inline-block;
   padding: 10px 16px;
+  text-decoration:none;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Aside = props => (

@@ -1,17 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
-import { Route} from "react-router-dom";
-// import styled from 'styled-components';
-// import { createGlobalStyle } from 'styled-components';
 import GlobalStyle from "./style/GlobalStyle"
 import './style/icons.css'
 
 import SiteBody from './style/SiteBody';
-import Aside from './componenets/Aside'
-import Header from './componenets/Header'
-import About from './About';
-import Home from './Home';
-
+import Aside from './componenets/Aside';
+import Content from './componenets/Content'
+import Navigation from './componenets/Navigation'
 
 const App = props =>{
   const [light, setLight] = useState(false);
@@ -26,12 +21,11 @@ const App = props =>{
     <>
       <GlobalStyle colors={colors} />
       <SiteBody>
-       <Aside colors={colors}/>
-        
+        <Navigation colors={colors}/>
+        <Aside colors={colors}/>
+        <Content colors={colors}/>
       </SiteBody>
-      <Header/>
-      <Route path='/about' exact component={About}/>
-      <Route path='/' exact component={Home}/>
+      
     </>
   );
 }
