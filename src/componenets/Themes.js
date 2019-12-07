@@ -39,11 +39,11 @@ const Theme = ({ theme, changeTheme }) => {
   return (
     <TheamBar>
       {theme.id == "dark" ? (
-        <button onClick={changeTheme}>
+        <button title="Active the Light Mode" onClick={changeTheme}>
           <span className="icon-sun"></span>
         </button>
       ) : (
-        <button onClick={changeTheme}>
+        <button title="Active the Dark Mode" onClick={changeTheme}>
           <span className="icon-moon"></span>
         </button>
       )}
