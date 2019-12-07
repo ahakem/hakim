@@ -4,7 +4,7 @@ import './style/icons.css'
 import colors from "./data/colors";
 import Themes from  "./componenets/Themes"
 import Header from  "./componenets/Header"
-
+import { ThemeContext } from 'styled-components';
 import SiteBody from './style/SiteBody';
 
 
@@ -15,18 +15,18 @@ const App = props =>{
   }
 
   return (
-    <>
+    <ThemeContext.Provider value={theme}>
       <GlobalStyle  theme={theme} />
       <Themes
         theme={theme}
         changeTheme={changeTheme}
       />
-      <Header theme={theme} />
+      <Header/>
       <SiteBody>
         
       </SiteBody>
       
-    </>
+    </ThemeContext.Provider>
   );
 }
 
