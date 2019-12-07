@@ -1,23 +1,27 @@
 import React , { useState } from 'react';
 import GlobalStyle from "./style/GlobalStyle"
 import './style/icons.css'
+import colors from "./data/colors";
+import Themes from  "./componenets/Themes"
+import Header from  "./componenets/Header"
 
 import SiteBody from './style/SiteBody';
 
 
 const App = props =>{
-  // const [light, setLight] = useState(false);
-  const [dark, setDark] = useState(true);
-  // let colors={
-  //   bg: light? "#F5F6F7" : "#272333",
-  //   box: light? "#f5f8f9" : "#2F2C40",
-  //   smallBox:light? "#F1F1F1" : "#2C283A",
-  //   text:light? "#44566c" : "#fff",
-  //   theme: "#F29639"
-  // }
+  const [theme, setTheme] = useState(colors.dark);
+  const changeTheme = () => {
+    theme.id == "dark" ? setTheme(colors.light) : setTheme(colors.dark);
+  }
+
   return (
     <>
-      <GlobalStyle  dark={dark} />
+      <GlobalStyle  theme={theme} />
+      <Themes
+        theme={theme}
+        changeTheme={changeTheme}
+      />
+      <Header theme={theme} />
       <SiteBody>
         
       </SiteBody>

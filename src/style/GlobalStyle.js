@@ -4,10 +4,10 @@ import bg from '../img/bg.png';
 const GlobalStyle = createGlobalStyle`
   body {
     background: url('${bg}') top left no-repeat;
-    background-color: ${props => (props.dark? "#1d1d1d": "#f1f1f1")};
-
-   a{
-  }
+    background-color: ${props => (props.theme.header)};
+    @media (min-width: 992px) { 
+      background-color: ${props => (props.theme.body)};
+    }
   }
 `;
 
