@@ -38,7 +38,7 @@ const TheamBar = styled.section`
 const Theme = ({ theme, changeTheme }) => {
   return (
     <TheamBar>
-      {theme.id == "dark" ? (
+      {theme.id === "dark" ? (
         <button title="Active the Light Mode" onClick={changeTheme}>
           <span className="icon-sun"></span>
         </button>
