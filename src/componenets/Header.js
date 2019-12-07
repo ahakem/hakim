@@ -54,13 +54,13 @@ const DeveloperNote = styled.div`
   display: flex;
   align-items:center;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: flex-end;
 
   color:${props => (props.theme.subTExt)};
   font-size: 15px;
   p{
     position: relative;
-    padding:0 16px;
+    padding-left:16px;
     border-left:3px solid ${props => (props.theme.name)};
     position: relative;
     font-size:12px;
@@ -98,7 +98,7 @@ const Header = () => {
       <DeveloperNote>
         <p>I am a web developer in Alexandria.<br/>
 I spend my days with my hands in many
-different areas of development</p>
+different areas of development.</p>
       </DeveloperNote>
     </HeaderWrap>
   </SiteHeader>
