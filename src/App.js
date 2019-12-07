@@ -4,6 +4,7 @@ import './style/icons.css'
 import colors from "./data/colors";
 import Themes from  "./componenets/Themes"
 import Header from  "./componenets/Header"
+import Experience from "./componenets/Experience"
 import { ThemeContext } from 'styled-components';
 import SiteBody from './style/SiteBody';
 
@@ -23,7 +24,7 @@ const App = props =>{
       />
       <Header/>
       <SiteBody>
-        
+        <Experience/>
       </SiteBody>
       
     </ThemeContext.Provider>

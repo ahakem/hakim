@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const SiteBody = styled.div`
-  margin: 130px 24px;
+  margin:24px 16px;
   display: flex;
   flex-direction: column;
   position: relative;
