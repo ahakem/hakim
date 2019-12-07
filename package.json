@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://portfolio.uipia.com/",
+  "homepage": "https://hakim.ninja/",
   "private": true,
   "dependencies": {
     "react": "^16.12.0",
