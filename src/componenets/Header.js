@@ -40,6 +40,8 @@ const DeveloperName = styled.h1`
  color:${props => (props.theme.name)};
  font-size: 23px;
  margin: 0;
+ font-weight: normal;
+
 `;
 const DeveloperSubHead = styled.span`
  color:${props => (props.theme.subTExt)};
@@ -58,7 +60,7 @@ const DeveloperNote = styled.div`
   font-size: 15px;
   p{
     position: relative;
-    padding:4px 16px;
+    padding:0 16px;
     border-left:3px solid ${props => (props.theme.name)};
     position: relative;
     font-size:12px;
