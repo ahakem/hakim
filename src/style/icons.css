@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?q9af2d');
-  src:  url('fonts/icomoon.eot?q9af2d#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?q9af2d') format('truetype'),
-    url('fonts/icomoon.woff?q9af2d') format('woff'),
-    url('fonts/icomoon.svg?q9af2d#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?w8jten');
+  src:  url('fonts/icomoon.eot?w8jten#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?w8jten') format('truetype'),
+    url('fonts/icomoon.woff?w8jten') format('woff'),
+    url('fonts/icomoon.svg?w8jten#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -35,33 +35,32 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-cloud_download:before {
+.icon-msg:before {
   content: "\e903";
+  color: #f1f1f1;
 }
-.icon-menu:before {
-  content: "\e904";
+.icon-github:before {
+  content: "\e906";
+  color: #f1f1f1;
 }
-.icon-send:before {
-  content: "\e900";
-}
-.icon-phone:before {
-  content: "\e901";
-}
-.icon-calendar:before {
-  content: "\e902";
-}
-.icon-date:before {
-  content: "\e902";
-}
-.icon-schedule:before {
-  content: "\e902";
-}
-.icon-location:before {
-  content: "\e947";
+.icon-call:before {
+  content: "\e907";
+  color: #f1f1f1;
 }
 .icon-skype:before {
-  content: "\eac5";
+  content: "\e908";
+  color: #f1f1f1;
 }
-.icon-linkedin2:before {
+.icon-sun:before {
+  content: "\e909";
+}
+.icon-moon:before {
+  content: "\e90a";
+  color: #f1f1f1;
+}
+.icon-arrow-down:before {
+  content: "\e90b";
+}
+.icon-linkedin:before {
   content: "\eaca";
 }

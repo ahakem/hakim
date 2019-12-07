@@ -6,7 +6,7 @@ const SiteBody = styled.div`
   flex-direction: column;
   position: relative;
   @media screen and (min-width: 40em) {
-    max-width: 1000px;
+    max-width: 1024px;
     margin: 100px auto;
     flex-direction: row;
   }

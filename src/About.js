@@ -1,8 +1,11 @@
 import React from 'react';
+import Bio from './componenets/Bio'
 
-function About() {
+function About(props) {
   return (
-      <h2>This is the about page</h2>
+      <>
+      <Bio colors={props.colors}/>
+      </>
   );
 }
 
