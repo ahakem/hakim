@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React , { useState, useEffect } from 'react';
 import GlobalStyle from "./style/GlobalStyle"
 import './style/icons.css'
 import colors from "./data/colors";
@@ -10,10 +10,22 @@ import SiteBody from './style/SiteBody';
 
 
 const App = props =>{
-  const [theme, setTheme] = useState(colors.dark);
+  const [theme, setTheme] = useState(colors[window.localStorage.getItem('theme') || 'dark']);
   const changeTheme = () => {
-    theme.id == "dark" ? setTheme(colors.light) : setTheme(colors.dark);
+
+    if (theme.id === 'light') {
+      window.localStorage.setItem('theme', 'dark')
+      setTheme(colors.dark)
+    } else {
+      window.localStorage.setItem('theme', 'light')
+      setTheme(colors.light)
+    }
   }
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme');
+    localTheme && setTheme(colors[localTheme]);
+  }, []);
 
   return (
     <ThemeContext.Provider value={theme}>
