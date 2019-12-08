@@ -8,6 +8,7 @@ module.exports = {
     subTExt: "#7c7c7c",
     shape: "#343434",
     timeLine: "#e3e3e3",
+    bullets:'#8e8e8e'
   },
   light:{
     id:"light",
@@ -18,5 +19,6 @@ module.exports = {
     subTExt: "#7c7c7c",
     shape: "#e3e3e3",
     timeLine:"#1d1d1d;",
+    bullets:'#8e8e8e'
   }
 }

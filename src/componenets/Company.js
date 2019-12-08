@@ -1,0 +1,100 @@
+import React, { useState } from "react";
+import styled from "styled-components";
+
+const Content = styled.div`
+  flex-grow: 1;
+  padding-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+`;
+const CompanyHeader = styled.header`
+  font-size: 15px;
+  margin-left: 16px;
+  width: 100%;
+  color: ${props => props.theme.name};
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+  .dash {
+    display: none;
+    @media (min-width: 992px) {
+      display: flex;
+      padding: 0 4px;
+    }
+  }
+`;
+const Location = styled.div`
+  font-size: 12px;
+  color: ${props => props.theme.subTExt};
+  display: flex;
+  flex-direction: column;
+  margin: 8px 16px;
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+  .dash {
+    display: none;
+    @media (min-width: 992px) {
+      display: flex;
+      padding: 0 4px;
+    }
+  }
+`;
+
+const Work = styled.ul`
+  color: ${props => props.theme.bullets};
+  padding: 0;
+  margin: 0 0 0 18px;
+
+  li {
+    font-size: 15px;
+    margin-bottom: 16px;
+    @media (min-width: 992px) {
+      font-size: 12px;
+    }
+  }
+`;
+
+const JobTitle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+  @media (min-width: 992px) {
+    a{display: none;}
+  }
+`;
+
+const ExperianceContent = props => {
+  const [state, setstate] = useState(true);
+  const ToggleContent = () => {
+    setstate(!state);
+  };
+  return (
+    <Content>
+      <CompanyHeader>
+        <span>{props.companyName}</span>
+        <span className="dash"> - </span>
+        <JobTitle>
+          {props.jobTitle}
+          <a onClick={ToggleContent}> {!state ? "Show" : "Hide"} Details</a>
+        </JobTitle>
+      </CompanyHeader>
+
+      <Location>
+        <span>{props.location}</span>
+        <span className="dash"> - </span>
+        <span>{props.duration}</span>
+      </Location>
+      {state && (
+        <Work>
+          {props.list.map((item, index) => {
+            return <li key={index}>{item}</li>;
+          })}
+        </Work>
+      )}
+    </Content>
+  );
+};
+export default ExperianceContent;
