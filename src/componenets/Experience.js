@@ -37,7 +37,6 @@ const TimeLine = styled.div`
   
 `;
 const Content = styled.div`
-  background: blue;
   flex-grow:1;
   min-height:200px;
 `;
