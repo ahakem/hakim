@@ -48,7 +48,6 @@ const TimeLine = styled.div`
 `;
 
 const Experience = () => {
-  console.log(experianceList);
   return (
     <ExperienceSection>
       {experianceList.map((experiance, index) => {
@@ -60,11 +59,8 @@ const Experience = () => {
             </TimeLine>
             <ExperianceContent {...experiance} />
           </Company>
-          );
-        })
-      }
-          
-      
+        );
+      })}
     </ExperienceSection>
   );
 };
