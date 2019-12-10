@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import icons from '../style/icon.svg'
 
 const Content = styled.div`
   flex-grow: 1;
@@ -19,7 +20,7 @@ const CompanyHeader = styled.header`
   }
   .dash {
     display: none;
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       display: flex;
       padding: 0 4px;
     }
@@ -61,13 +62,28 @@ const JobTitle = styled.div`
   display: flex;
   justify-content: space-between;
   padding-right: 16px;
-  @media (min-width: 992px) {
+  @media (min-width: 1025px) {
     a{display: none;}
+  }
+`;
+const Toggler = styled.button`
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  margin-top:-24px;
+  svg{
+    width: 24px;
+    height: 24px;
+    fill: ${props => props.theme.name};
   }
 `;
 
 const ExperianceContent = props => {
   const [state, setstate] = useState(true);
+  const IsMobile = window.innerWidth < 768 ;
+  useEffect(() => {
+    IsMobile && setstate(false);
+  }, [])
   const ToggleContent = () => {
     setstate(!state);
   };
@@ -78,7 +94,16 @@ const ExperianceContent = props => {
         <span className="dash"> - </span>
         <JobTitle>
           {props.jobTitle}
-          <a onClick={ToggleContent}> {!state ? "Show" : "Hide"} Details</a>
+          {IsMobile && <Toggler onClick={ToggleContent}> 
+          {(!state) ?
+          <svg>
+            <use xlinkHref={`${icons}#icon-circle-down`}></use>
+          </svg>: 
+          <svg>
+          <use xlinkHref={`${icons}#icon-circle-up`}></use>
+        </svg>
+          } 
+          </Toggler>}
         </JobTitle>
       </CompanyHeader>
 

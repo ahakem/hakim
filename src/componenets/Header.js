@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import hakim from '../img/hakim.jpg';
 
-
 const SiteHeader = styled.header`
   @media (min-width: 992px) { 
     background:${props => (props.theme.header)};
@@ -13,11 +12,14 @@ const HeaderWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 16px;
-  @media (min-width: 992px) { 
+  @media (min-width: 768px) { 
     flex-direction: row;
-    width: 1024px;
+    width: 960px;
     height: 223px;
     margin: 0 auto;
+  }
+  @media screen and (min-width: 1025px) {
+    max-width: 1024px;
   }
 `;
 const DeveloperInfo = styled.div`

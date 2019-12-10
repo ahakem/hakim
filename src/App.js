@@ -1,7 +1,6 @@
 import React , { useState, useEffect } from 'react';
 import styled from "styled-components";
 import GlobalStyle from "./style/GlobalStyle"
-import './style/icons.css'
 import colors from "./data/colors";
 import Themes from  "./componenets/Themes"
 import Header from  "./componenets/Header"

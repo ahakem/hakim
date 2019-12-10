@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import icons from '../style/icon.svg'
+
 const TheamBar = styled.section`
   text-align:right;
   padding-right:24px;
@@ -19,9 +21,14 @@ const TheamBar = styled.section`
     cursor: pointer;
     border: 0;
     outline: none
-    color: ${props => props.theme.themeIcon};
+    
     border-radius:50%;
     right:16px;
+    svg{
+      width: 24px;
+      height: 24px;
+      fill: ${props => props.theme.themeIcon};
+    }
     @media (min-width: 992px) { 
       background:  ${props => props.theme.body};
       bottom: -50%;
@@ -40,11 +47,15 @@ const Theme = ({ theme, changeTheme }) => {
     <TheamBar>
       {theme.id === "dark" ? (
         <button title="Active the Light Mode" onClick={changeTheme}>
-          <span className="icon-sun"></span>
+          <svg>
+            <use xlinkHref={`${icons}#icon-sun`}></use>
+          </svg>
         </button>
       ) : (
         <button title="Active the Dark Mode" onClick={changeTheme}>
-          <span className="icon-moon"></span>
+          <svg>
+            <use xlinkHref={`${icons}#icon-moon`}></use>
+          </svg>
         </button>
       )}
     </TheamBar>
