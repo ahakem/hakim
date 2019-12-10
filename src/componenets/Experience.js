@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import ExperianceContent from "./Company";
 import experianceList from "../data/experianceList";
+import Title from "./Title"
 
 const ExperienceSection = styled.section`
   @media (min-width: 992px) {
@@ -48,20 +49,29 @@ const TimeLine = styled.div`
 `;
 
 const Experience = () => {
+  const [count, setCount] = useState(3);
   return (
-    <ExperienceSection>
-      {experianceList.map((experiance, index) => {
-        return (
-          <Company key={index}>
-            <TimeLine>
-              <div className="shape"></div>
-              <div className="line"></div>
-            </TimeLine>
-            <ExperianceContent {...experiance} />
-          </Company>
-        );
-      })}
-    </ExperienceSection>
+    <>
+    
+      <ExperienceSection>
+        <Title data="Experience" />
+        {experianceList.slice(0,count).map((experiance, index) => {
+          return (
+            <Company key={index}>
+              <TimeLine>
+                <div className="shape"></div>
+                <div className="line"></div>
+              </TimeLine>
+              <ExperianceContent {...experiance} />
+            </Company>
+          );
+        })}
+        {count}
+        {count < experianceList.length &&
+          <button onClick={() => setCount(count + 1)}>Show More</button>
+        }
+      </ExperienceSection>
+    </>
   );
 };
 export default Experience;
