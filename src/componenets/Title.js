@@ -6,6 +6,8 @@ const Heading = styled.h4`
   font-weight: normal;
   color: ${props => props.theme.name};
   display: inline-block;
+  margin-bottom:8px;
+  text-transform
   @media (min-width: 992px) {
     position: relative;
     &:after {

@@ -1,4 +1,5 @@
 import React , { useState, useEffect } from 'react';
+import styled from "styled-components";
 import GlobalStyle from "./style/GlobalStyle"
 import './style/icons.css'
 import colors from "./data/colors";
@@ -7,8 +8,16 @@ import Header from  "./componenets/Header"
 import Experience from "./componenets/Experience"
 import { ThemeContext } from 'styled-components';
 import SiteBody from './style/SiteBody';
+import About from './componenets/About'
 
-
+const RightCol = styled.div`
+order: 0
+@media (min-width: 992px) {
+  width: 50%;
+  padding-left:24px;
+  box-sizing: border-box;
+}
+`;
 const App = props =>{
   const [theme, setTheme] = useState(colors[window.localStorage.getItem('theme') || 'dark']);
   const changeTheme = () => {
@@ -37,6 +46,9 @@ const App = props =>{
       <Header/>
       <SiteBody>
         <Experience/>
+        <RightCol>
+          <About/>
+        </RightCol>
       </SiteBody>
       
     </ThemeContext.Provider>

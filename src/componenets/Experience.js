@@ -5,8 +5,12 @@ import experianceList from "../data/experianceList";
 import Title from "./Title"
 
 const ExperienceSection = styled.section`
+  order:1;
   @media (min-width: 992px) {
+    order:0;
     width: 50%;
+    padding-right:24px;
+    box-sizing: border-box;
   }
 `;
 
@@ -33,6 +37,7 @@ const TimeLine = styled.div`
       height: 29px;
       margin-top: 0;
       background: ${props => props.theme.subTExt};
+      
     }
   }
   .line {
