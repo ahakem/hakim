@@ -76,8 +76,8 @@ const Toggler = styled.button`
   border: 0;
   margin-top: -24px;
   svg {
-    width: 24px;
-    height: 24px;
+    width: 21px;
+    height: 21px;
     fill: ${props => props.theme.name};
   }
 `;

@@ -53,6 +53,19 @@ const TimeLine = styled.div`
   }
 `;
 
+const ShowMore = styled.button`
+ color: ${props => props.theme.name}
+ font-size:12px;
+ margin: 14px;
+ border: 1px solid ${props => props.theme.name};
+ background: none;
+ border-radius: 3px;
+ padding: 4px 8px;
+ @media (min-width: 992px) {
+  margin-top:4px;
+}
+`;
+
 const Experience = () => {
   const [count, setCount] = useState(3);
   return (
@@ -62,18 +75,24 @@ const Experience = () => {
         <Title data="Experience" />
         {experianceList.slice(0,count).map((experiance, index) => {
           return (
-            <Company key={index}>
-              <TimeLine>
-                <div className="shape"></div>
-                <div className="line"></div>
-              </TimeLine>
-              <ExperianceContent {...experiance} />
-            </Company>
+              <Company key={index}>
+                <TimeLine>
+                  <div className="shape"></div>
+                  <div className="line"></div>
+                </TimeLine>
+                <ExperianceContent {...experiance} />
+              </Company>
           );
         })}
-        {count}
         {count < experianceList.length &&
-          <button onClick={() => setCount(count + 1)}>Show More</button>
+        <Company>
+          <TimeLine>
+            <div className="shape"></div>
+            <div className="line"></div>
+          </TimeLine>
+          <ShowMore onClick={() => setCount(count + 2)}>Show More Experiences</ShowMore>
+        </Company>
+          
         }
       </ExperienceSection>
     </>
