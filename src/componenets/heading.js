@@ -9,9 +9,7 @@ const Title = styled.h4`
 
 
 const Heading = props => {
-  // debugger
   return(
-  
   <>
     <Title colors={props.colors}>
      {props.data}

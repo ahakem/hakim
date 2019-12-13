@@ -6,7 +6,7 @@ const TheamBar = styled.section`
   text-align:right;
   padding-right:24px;
   margin-top:36px;
-  @media (min-width: 992px) { 
+  @media (min-width: 600px) { 
     position: relative;
     height: 36px;
     text-align:center;
@@ -29,7 +29,7 @@ const TheamBar = styled.section`
       height: 24px;
       fill: ${props => props.theme.themeIcon};
     }
-    @media (min-width: 992px) { 
+    @media (min-width: 600px) { 
       background:  ${props => props.theme.body};
       bottom: -50%;
       right: 50%;

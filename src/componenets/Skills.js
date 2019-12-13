@@ -1,13 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Title from "./Title";
-import skills from '../img/skills.svg';
-
+import skills from "../img/skills.svg";
+import skillsColored from "../img/skills-colored.svg";
 
 const SkillsList = styled.div`
   color: ${props => props.theme.bullets};
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   flex-wrap: wrap;
 
   @media (min-width: 768px) {
@@ -17,46 +17,34 @@ const SkillsList = styled.div`
 
 const Skill = styled.div`
   background: ${props => props.theme.shape};
-  width: 50px;
+  flex-basis: 50px;
   height: 50px;
   display: flex;
-  margin:0 15px 30px 0;
+  margin: 0 15px 15px 0;
   border-radius: 3px;
-  justify-content:center;
-  align-items:center;
-  &:nth-child(4n){
-    margin-right:0;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-in-out;
+  &:hover{
+    transform: scale(1.3);
   }
-  @media screen and (min-width: 414px) {
-    margin-right:24px;
-    &:nth-child(4n){
-      margin-right:0;
+
+  @media (max-width: 417px) {
+    margin-right: 30px;
+    &:nth-child(4n) {
+      margin-right: 0;
     }
   }
 
-  @media (min-width: 768px) {
-    margin:0 30px 30px 0;
-    &:nth-child(4n){
-      margin-right:30px;
-    }
-  }
-
-  @media (min-width: 992px) {
-    margin:0 30px 30px 0;
-    &:nth-child(4n){
-      margin-right:30px;
-    }
-  }
-  
-  
-  // flex-grow:1;
-  svg{
-    fill:${props => props.theme.timeLine};
+  svg {
+    fill: ${props => props.theme.timeLine};
     width: 32px;
     height: 32px;
   }
-  
-  @media (min-width: 992px) {font-size:12px}
+
+  @media (min-width: 992px) {
+    font-size: 12px;
+  }
 `;
 const skillList = [
   "javascript",
@@ -88,24 +76,22 @@ const skillList = [
   "photoshop",
   "illustrator",
   "atom"
-]
+];
 const Skills = () => {
   return (
     <>
-    <Title data="Skills" />
-    <SkillsList>
-    {skillList.map((skill, index) => {
-      return (
-      <Skill>
-      <svg>
-        <use xlinkHref={`${skills}#${skill}`}></use>
-      </svg>
-      </Skill>
-      );
-    })}
-      
-
-    </SkillsList>
+      <Title data="Skills" />
+      <SkillsList>
+        {skillList.map((skill, index) => {
+          return (
+            <Skill>
+              <svg>
+                <use xlinkHref={`${skills}#${skill}`}></use>
+              </svg>
+            </Skill>
+          );
+        })}
+      </SkillsList>
     </>
   );
 };
