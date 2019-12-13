@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Title from "./Title";
 import skills from "../img/skills.svg";
-import skillsColored from "../img/skills-colored.svg";
 
 const SkillsList = styled.div`
   color: ${props => props.theme.bullets};
