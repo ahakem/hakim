@@ -5,21 +5,37 @@ import skills from "../img/skills.svg";
 
 const SkillsList = styled.div`
   color: ${props => props.theme.bullets};
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  margin-bottom:36px;
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
 
+  @media (min-width: 360px) {
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(10, 50px);
+    grid-column-gap: 30px;
+  }
+  @media (orientation: landscape) {
+    grid-template-columns: repeat(6, 50px);
+  }
   @media (min-width: 768px) {
-    justify-content: flex-start;
+    grid-template-columns: repeat(8, 50px);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(6, 50px);
   }
 `;
 
 const Skill = styled.div`
   background: ${props => props.theme.shape};
-  flex-basis: 50px;
+  width:  50px;
   height: 50px;
   display: flex;
-  margin: 0 15px 15px 0;
   border-radius: 3px;
   justify-content: center;
   align-items: center;
@@ -29,10 +45,10 @@ const Skill = styled.div`
   }
 
   @media (max-width: 417px) {
-    margin-right: 30px;
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
+    // margin-right: 28px;
+    // &:nth-child(4n) {
+    //   margin-right: 0;
+    // }
   }
 
   svg {
