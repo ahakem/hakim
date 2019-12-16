@@ -5,7 +5,7 @@ import skills from "../img/skills.svg";
 
 const SkillsList = styled.div`
   color: ${props => props.theme.bullets};
-  margin-bottom:36px;
+  margin-bottom: 36px;
   display: grid;
   grid-template-columns: repeat(4, 50px);
   grid-row-gap: 15px;
@@ -33,14 +33,14 @@ const SkillsList = styled.div`
 
 const Skill = styled.div`
   background: ${props => props.theme.shape};
-  width:  50px;
+  width: 50px;
   height: 50px;
   display: flex;
   border-radius: 3px;
   justify-content: center;
   align-items: center;
-  transition: all .2s ease-in-out;
-  &:hover{
+  transition: all 0.2s ease-in-out;
+  &:hover {
     transform: scale(1.3);
   }
 
@@ -100,9 +100,11 @@ const Skills = () => {
         {skillList.map((skill, index) => {
           return (
             <Skill>
-              <svg>
-                <use xlinkHref={`${skills}#${skill}`}></use>
-              </svg>
+              <div>
+                <svg>
+                  <use xlinkHref={`${skills}#${skill}`}></use>
+                </svg>
+              </div>
             </Skill>
           );
         })}

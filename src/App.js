@@ -9,6 +9,7 @@ import { ThemeContext } from 'styled-components';
 import SiteBody from './style/SiteBody';
 import About from './componenets/About'
 import Skills from './componenets/Skills'
+import GetResume from "./componenets/Resume"
 
 const RightCol = styled.div`
 order: 0
@@ -44,6 +45,7 @@ const App = props =>{
         changeTheme={changeTheme}
       />
       <Header/>
+      <GetResume/>
       <SiteBody>
         <Experience/>
         <RightCol>
