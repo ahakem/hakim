@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const SiteBody = styled.div`
   // margin:24px 36px;
@@ -6,10 +6,8 @@ const SiteBody = styled.div`
   flex-direction: column;
   position: relative;
   @media screen and (min-width: 769px) {
-    
-    
   }
-  @media (min-width: 768px) and (max-width: 991.98px) { 
+  @media (min-width: 768px) and (max-width: 991.98px) {
     // max-width: 650px;
     // margin: 100px auto;
   }
@@ -21,9 +19,8 @@ const SiteBody = styled.div`
   @media screen and (min-width: 1025px) {
     // max-width: 1024px;
     flex-direction: row;
-    order:0;
+    order: 0;
   }
 `;
-
 
 export default SiteBody;

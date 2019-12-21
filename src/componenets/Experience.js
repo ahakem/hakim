@@ -1,15 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ExperianceContent from "./Company";
 import experianceList from "../data/experianceList";
-import Title from "./Title"
+import Title from "./Title";
 
 const ExperienceSection = styled.section`
-  order:1;
+  order: 1;
   @media (min-width: 992px) {
-    order:0;
+    order: 0;
     width: 50%;
-    padding-right:24px;
+    padding-right: 24px;
     box-sizing: border-box;
   }
 `;
@@ -37,7 +37,6 @@ const TimeLine = styled.div`
       height: 29px;
       margin-top: 0;
       background: ${props => props.theme.subTExt};
-      
     }
   }
   .line {
@@ -70,30 +69,30 @@ const Experience = () => {
   const [count, setCount] = useState(3);
   return (
     <>
-    
       <ExperienceSection>
         <Title data="Experience" />
-        {experianceList.slice(0,count).map((experiance, index) => {
+        {experianceList.slice(0, count).map((experiance, index) => {
           return (
-              <Company key={index}>
-                <TimeLine>
-                  <div className="shape"></div>
-                  <div className="line"></div>
-                </TimeLine>
-                <ExperianceContent {...experiance} />
-              </Company>
+            <Company key={index}>
+              <TimeLine>
+                <div className="shape"></div>
+                <div className="line"></div>
+              </TimeLine>
+              <ExperianceContent {...experiance} />
+            </Company>
           );
         })}
-        {count < experianceList.length &&
-        <Company>
-          <TimeLine>
-            <div className="shape"></div>
-            <div className="line"></div>
-          </TimeLine>
-          <ShowMore onClick={() => setCount(count + 2)}>Show More Experiences</ShowMore>
-        </Company>
-          
-        }
+        {count < experianceList.length && (
+          <Company>
+            <TimeLine>
+              <div className="shape"></div>
+              <div className="line"></div>
+            </TimeLine>
+            <ShowMore onClick={() => setCount(count + 2)}>
+              Show More Experiences
+            </ShowMore>
+          </Company>
+        )}
       </ExperienceSection>
     </>
   );

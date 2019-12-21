@@ -11,7 +11,7 @@ const ResumeBar = styled.div`
   margin-top: -20px;
   text-align: center;
   position: relative;
-  z-index:100;
+  z-index: 100;
 `;
 
 const ResumeBtn = styled.a`
@@ -22,13 +22,13 @@ const ResumeBtn = styled.a`
   display: inline-flex;
   text-decoration: none;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   height: 32px;
   position: fixed;
   bottom: 0px;
-  left:0px;
-  right:0px;
-  zIndex: 100;
+  left: 0px;
+  right: 0px;
+  zindex: 100;
   @media (min-width: 768px) {
     border: solid 1px #e3e3e3;
     position: static;

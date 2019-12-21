@@ -7,17 +7,12 @@ const Title = styled.h4`
   
 `;
 
-
 const Heading = props => {
-  return(
-  <>
-    <Title colors={props.colors}>
-     {props.data}
-      
-    </Title>
-  </>
-)};
+  return (
+    <>
+      <Title colors={props.colors}>{props.data}</Title>
+    </>
+  );
+};
 
 export default Heading;
-
-

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import icons from '../style/icon.svg'
+import icons from "../style/icon.svg";
 
 const TheamBar = styled.section`
   text-align:right;
