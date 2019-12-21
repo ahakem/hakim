@@ -7,7 +7,7 @@ module.exports = [
   {
     name: "+201110299333",
     icon: "phone",
-    link: "+201110299333"
+    link: "callto:+201110299333"
   },
   {
     name: "github.com/ahakem",
