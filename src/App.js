@@ -10,6 +10,7 @@ import SiteBody from './style/SiteBody';
 import About from './componenets/About'
 import Skills from './componenets/Skills'
 import GetResume from "./componenets/Resume"
+import Contacts from "./componenets/contacts"
 
 const RightCol = styled.div`
 order: 0
@@ -18,6 +19,24 @@ order: 0
   padding-left:24px;
   box-sizing: border-box;
 }
+`;
+const SiteWraper = styled.div`
+margin:24px 36px;
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) and (max-width: 991.98px) { 
+    max-width: 650px;
+    margin: 50px auto 30px auto;
+  }
+  @media screen and (min-width: 992px) {
+    margin: 100px auto;
+    max-width: 960px;
+  }
+  @media screen and (min-width: 1025px) {
+    max-width: 1024px;
+    margin-bottom:0;
+  }
+
 `;
 const App = props =>{
   const [theme, setTheme] = useState(colors[window.localStorage.getItem('theme') || 'dark']);
@@ -46,13 +65,16 @@ const App = props =>{
       />
       <Header/>
       <GetResume/>
-      <SiteBody>
-        <Experience/>
-        <RightCol>
-          <About/>
-          <Skills/>
-        </RightCol>
-      </SiteBody>
+      <SiteWraper>
+        <Contacts/>
+        <SiteBody>
+          <Experience/>
+          <RightCol>
+            <About/>
+            <Skills/>
+          </RightCol>
+        </SiteBody>
+      </SiteWraper>
       
     </ThemeContext.Provider>
   );
