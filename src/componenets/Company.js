@@ -55,6 +55,9 @@ const Work = styled.ul`
     @media (min-width: 992px) {
       font-size: 12px;
     }
+    span,b,a{
+      color: #1f6cb5;
+    }
   }
 `;
 
@@ -122,7 +125,7 @@ const ExperianceContent = props => {
       {state && (
         <Work>
           {props.list.map((item, index) => {
-            return <li key={index}>{item}</li>;
+          return <li key={index} dangerouslySetInnerHTML={{__html: item}} />;
           })}
         </Work>
       )}

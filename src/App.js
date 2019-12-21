@@ -12,8 +12,9 @@ import Skills from "./componenets/Skills";
 import GetResume from "./componenets/Resume";
 import Contacts from "./componenets/contacts";
 
-const RightCol = styled.div`
-  order: 0 @media (min-width: 992px) {
+const RightCol = styled.section`
+  order: 0; 
+  @media (min-width: 992px) {
     width: 50%;
     padding-left: 24px;
     box-sizing: border-box;
