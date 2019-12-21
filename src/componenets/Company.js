@@ -47,7 +47,7 @@ const Location = styled.div`
 const Work = styled.ul`
   color: ${props => props.theme.bullets};
   padding: 0;
-  margin: 0 0 0 18px;
+  margin: 24px 0 0 18px;
 
   li {
     font-size: 15px;
