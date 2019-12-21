@@ -8,18 +8,18 @@
       "type": "image/x-icon"
     },
     {
-      "src": "hakim.jpg",
+      "src": "hakim192.jpg",
       "type": "image/jpg",
       "sizes": "192x192"
     },
     {
-      "src": "hakim.jpg",
+      "src": "hakim512.jpg",
       "type": "image/jpg",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#0f0f0f",
+  "background_color": "#0f0f0f"
 }
