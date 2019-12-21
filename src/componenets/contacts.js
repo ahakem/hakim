@@ -10,7 +10,7 @@ const ContactsWraper = styled.div`
   @media screen and (min-width: 1024px) {
     order: 1;
     flex-wrap: wrap;
-    justify-content: end;
+    justify-content: start;
     margin-top: 36px;
     padding-top: 16px;
     border-top: 3px solid ${props => props.theme.header};
