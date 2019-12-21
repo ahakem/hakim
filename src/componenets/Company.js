@@ -52,6 +52,7 @@ const Work = styled.ul`
   li {
     font-size: 15px;
     margin-bottom: 16px;
+    line-height:16px;
     @media (min-width: 992px) {
       font-size: 12px;
     }

@@ -31,10 +31,10 @@ module.exports = [
     location:"Alexandria, Egypt",
     duration: "Jan 2013 - Mar 2014",
     list:[
-      "Enhancing and fixing issues on 4 projects using <spa>jQuery</span>.",
-      "Translating <a target='_blank' href='https://www.autolina.ch/'>Autolina.ch</a> website to (<span>HTML/CSS</span> and <spa>jQuery</span>).",
-      "Building an Android mobile app for <spa>OCR</span> called smart doc scanner.",
-      "Building a website for smart doc scanner app using <spa>HTML/CSS/JS</span> and <spa>PHP</span>  then converting it to <spa>WordPress</span> theme "
+      "Enhancing and fixing issues on 4 projects using <span>jQuery</span>.",
+      "Translating <a target='_blank' href='https://www.autolina.ch/'>Autolina.ch</a> website to (<span>HTML/CSS</span> and <span>jQuery</span>).",
+      "Building an Android mobile app for <span>OCR</span> called smart doc scanner.",
+      "Building a website for smart doc scanner app using <span>HTML/CSS/JS</span> and <span>PHP</span>  then converting it to <span>WordPress</span> theme "
     ]
   },
   {
