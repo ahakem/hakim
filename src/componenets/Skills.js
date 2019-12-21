@@ -40,8 +40,12 @@ const Skill = styled.div`
   justify-content: center;
   align-items: center;
   transition: all 0.2s ease-in-out;
+  position: relative;
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
+    .skillName{
+      visibility: visible;
+    }
   }
 
   @media (max-width: 417px) {
@@ -61,36 +65,48 @@ const Skill = styled.div`
     font-size: 12px;
   }
 `;
+
+const SkillName = styled.div`
+  position: absolute;
+  background: ${props => props.theme.timeLine};
+  padding: 4px;
+  bottom: 102%;
+  border-radius: 3px;
+  text-transform: capitalize;
+  visibility: hidden;
+  white-space: nowrap;
+`;
 const skillList = [
-  "javascript",
-  "react",
-  "redux",
-  "babel",
-  "jquery",
-  "webpack",
-  "grunt",
-  "html5",
-  "css3",
-  "npmmark",
-  "yarn",
-  "jasmine",
-  "wordpress",
-  "visualstudio",
-  "sass",
-  "less",
-  "foundation",
-  "bootstrap",
-  "ruby",
-  "rails",
-  "php",
-  "git",
-  "github",
-  "gitlab",
-  "bitbucket",
-  "sourcetree",
-  "photoshop",
-  "illustrator",
-  "atom"
+  {icon:"javascript",name:"javaScript"},
+
+  {icon:"react", name:"React"},
+  {icon:"redux", name:"Redux"},
+  {icon:"babel", name:"babel"},
+  {icon:"jquery", name:"jQuery"},
+  {icon:"webpack", name:"webPack"},
+  {icon:"grunt", name:"Grunt"},
+  {icon:"html5", name:"HTML5"},
+  {icon:"css3", name:"CSS3"},
+  {icon:"npmmark", name:"npm"},
+  {icon:"yarn", name:"yarn"},
+  {icon:"jasmine", name:"Jasmine"},
+  {icon:"wordpress", name:"WordPress"},
+  {icon:"visualstudio", name:"Visual Studio"},
+  {icon:"sass", name:"SASS"},
+  {icon:"less", name:"Less"},
+  {icon:"foundation", name:"Foundation"},
+  {icon:"bootstrap", name:"Bootstrap"},
+  {icon:"ruby", name:"ruby"},
+  {icon:"rails", name:"rails"},
+  {icon:"php", name:"PHP"},
+  {icon:"git", name:"Git"},
+  {icon:"github", name:"GitHub"},
+  {icon:"gitlab", name:"GitLab"},
+  {icon:"bitbucket", name:"Bitbucket"},
+  {icon:"sourcetree", name:"Source Tree"},
+  {icon:"photoshop", name:"Photoshop"},
+  {icon:"illustrator", name:"Illustrator"},
+  {icon:"atom", name:"Atom"}
 ];
 const Skills = () => {
   return (
@@ -102,9 +118,10 @@ const Skills = () => {
             <Skill>
               <div>
                 <svg>
-                  <use xlinkHref={`${skills}#${skill}`}></use>
+                  <use xlinkHref={`${skills}#${skill.icon}`}></use>
                 </svg>
               </div>
+              <SkillName className="skillName">{skill.name}</SkillName>
             </Skill>
           );
         })}
