@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import styled from "styled-components";
 import GlobalStyle from "./style/GlobalStyle";
 import colors from "./data/colors";
 import Themes from "./componenets/Themes";
 import Header from "./componenets/Header";
-import Experience from "./componenets/Experience";
+
 import { ThemeContext } from "styled-components";
 import SiteBody from "./style/SiteBody";
 import About from "./componenets/About";
 import Skills from "./componenets/Skills";
 import GetResume from "./componenets/Resume";
-import Contacts from "./componenets/contacts";
+const Contacts = React.lazy(() => import('./componenets/contacts'));
+
+const Experience = React.lazy(() => import('./componenets/Experience'));
 
 const RightCol = styled.section`
   order: 0; 
@@ -63,9 +65,14 @@ const App = props => {
       <Header />
       <GetResume />
       <SiteWraper>
+      <Suspense fallback={<div>Loading...</div>}>
         <Contacts />
+      </Suspense>
+        
         <SiteBody>
-          <Experience />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Experience />
+          </Suspense>
           <RightCol>
             <About />
             <Skills />

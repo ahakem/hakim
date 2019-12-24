@@ -64,7 +64,7 @@ const Contacts = () => {
     <ContactsWraper>
       {infoCard.map((contact, index) => {
         return (
-          <Contact href={contact.link}>
+          <Contact key={index} href={contact.link}>
             <Icon>
               <svg>
                 <use xlinkHref={`${icons}#icon-${contact.icon}`}></use>
