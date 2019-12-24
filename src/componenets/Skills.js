@@ -115,7 +115,7 @@ const Skills = () => {
       <SkillsList>
         {skillList.map((skill, index) => {
           return (
-            <Skill>
+            <Skill key={index}>
               <div>
                 <svg>
                   <use xlinkHref={`${skills}#${skill.icon}`}></use>
