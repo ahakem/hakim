@@ -4,10 +4,10 @@
   "homepage": "https://hakim.ninja/",
   "private": true,
   "dependencies": {
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-scripts": "3.4.1",
-    "styled-components": "^4.4.1"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-scripts": "^3.4.4",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,5 +31,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "yarn-upgrade-all": "^0.5.4"
   }
 }

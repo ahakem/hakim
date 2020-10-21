@@ -23,5 +23,10 @@ module.exports = [
     name: "me@hakim.ninja",
     icon: "send",
     link: "mailto:me@hakim.ninja"
+  },
+  {
+    name: "npmjs.com/~ahakim",
+    icon: "npm",
+    link: "https://www.npmjs.com/~ahakim"
   }
 ];

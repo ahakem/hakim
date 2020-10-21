@@ -5,9 +5,10 @@ module.exports = [
     location:"Cairo, Egypt",
     duration: "Jan 2015 - PRESENT",
     list:[
+      "Building (confidential Project ) using  <b>React JS</b>, <b>NextJS</b>, <b>Redux</b> and <b>Material-UI</b>.",
       "Long-term web maintenance in <a target='_blank' href='https://www.eaglerider.com/'>Eaglerider.com</a> site which serves around 300k+ sessions/month.",
       "Encouraging the team to migrate to Client-side rendering.",
-      "Applying new design and Migrating from server-side rendering to Client-side rendering using <b>React JS</b>.",
+      "Applying new design and Migrating from server-side rendering to Client-side rendering using <b>React JS</b>, <b>NextJS</b>, <b>Redux</b> and <b>Material-UI</b>.",
       "Enhancing the performance of pages, regarding google insights the speed rank improved from average 20 to 80 on Mobile and from 40 to 95 on Desktop.",
       "Leading a team of 4 Developers.",
       "Refactoring the Mobile Version using <span>Foundation</span>, <span>jQuery</span> and integrating with ruby on rails views."

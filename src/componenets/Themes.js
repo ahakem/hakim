@@ -20,7 +20,7 @@ const TheamBar = styled.section`
     font-size:24px;
     cursor: pointer;
     border: 0;
-    outline: none
+    outline: none;
     
     border-radius:50%;
     right:16px;

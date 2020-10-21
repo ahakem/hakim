@@ -53,13 +53,14 @@ const TimeLine = styled.div`
 `;
 
 const ShowMore = styled.button`
- color: ${props => props.theme.name}
+ color: ${props => props.theme.name};
  font-size:12px;
  margin: 14px;
  border: 1px solid ${props => props.theme.name};
  background: none;
  border-radius: 3px;
- padding: 4px 8px;
+ padding: 8px 8px;
+ cursor: pointer;
  @media (min-width: 992px) {
   margin-top:4px;
 }
