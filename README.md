@@ -20,9 +20,9 @@ I love sharing my knowledge and experience, contribute to open source projects r
 **NOTE**: *Top languages does not indicate my skill level or something like that, it's a github metric of which languages I have the most code on github.*
 
 <a href="https://github.com/ahakem/">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=ahakem&count_private=true&show_icons=true&theme=radical&hide_border=false" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=ahakem&count_private=true&show_icons=true&theme=bear&hide_border=false" />
 </a> 
 <a href="https://github.com/ahakem/">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahakem&layout=compact&theme=radical&hide_border=false" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahakem&layout=compact&theme=bear&hide_border=false" />
 </a>
   
